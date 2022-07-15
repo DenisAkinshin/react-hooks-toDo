@@ -12,10 +12,11 @@ function App() {
     {title:'Сделать сайт', check:'false'},
   ])
 
-
+  const [post, setPost] = useState({title:'', check:'false'})
 
   function addItem(item) {
     console.log('Я отработал')
+    setPost({title:'', check:'false'})
     setState([...state, item]);
   }
 
@@ -26,6 +27,8 @@ function App() {
   return (
     <div className="App">
         <MyForm
+          value={post}
+          setValue={setPost}
           addPost={addItem}
         />
         <MyItemList

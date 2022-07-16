@@ -1,0 +1,16 @@
+.button__add {
+    font-size: 14px;
+    color: #000000;
+    font-weight: 500;
+    width: 100%;
+    margin: 0px;
+    background: #fff;
+    border:1px solid #303743 ;
+    padding: 10px 0px;
+    transition: .2s ease-in-out;
+}
+
+.button__add:hover{
+    background: #303743;
+    color: #fff;
+}

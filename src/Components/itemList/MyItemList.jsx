@@ -2,7 +2,7 @@ import React from "react";
 import MyItem from "./MyItem";
 import cl from './items.module.css'
 
-const MyItemList = ({title, value, remove}) => {
+const MyItemList = ({title, value, remove, checkValue, setCheckValue}) => {
     if (value.length == 0) {
         return (
             <h1>Задач не обнаружено, вы все сделали!</h1>
@@ -10,9 +10,16 @@ const MyItemList = ({title, value, remove}) => {
     } else {
         return (
             <div className={cl.list}>
-                <h1>{title}</h1>
+                <h1 className={cl.list__title}>{title}</h1>
                 {value.map((element, index) => 
-                    <MyItem key={index} title={element.title} post={element} removeItem={remove}/>
+                    <MyItem 
+                        key={index} 
+                        title={element.title} 
+                        post={element} 
+                        removeItem={remove} 
+                        checkValue={checkValue}
+                        setCheckValue={setCheckValue}
+                    />
                 )}
             </div>
         )

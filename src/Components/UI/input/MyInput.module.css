@@ -1,0 +1,9 @@
+.myInput{
+    box-sizing: border-box;
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #344054;
+    font-size: 14px;
+    padding: 8px 5px;
+    outline: none;
+}

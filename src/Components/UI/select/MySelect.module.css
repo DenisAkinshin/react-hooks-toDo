@@ -1,0 +1,10 @@
+.mySelect {
+    margin: 40px 0px;
+    width: 300px;
+    border-radius: 5px ;
+    outline: none;
+    font-size: 14px;
+    font-weight: 100;
+    background-color: black;
+    color: rgb(211, 211, 211);
+}

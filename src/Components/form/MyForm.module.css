@@ -1,7 +1,8 @@
 .myForm{
-    height: 90px;
+    position: relative;
+    height: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 300px;
+    width: 660px;
 }

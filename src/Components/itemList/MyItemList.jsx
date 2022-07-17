@@ -10,7 +10,6 @@ const MyItemList = ({title, value, remove, checkValue, setCheckValue}) => {
     } else {
         return (
             <div className={cl.list}>
-                <h1 className={cl.list__title}>{title}</h1>
                 {value.map((element, index) => 
                     <MyItem 
                         key={index} 

@@ -21,12 +21,13 @@ const MyItem = ({title, post, removeItem, checkValue, setCheckValue}) => {
     return (
         <div className={cl.item}>
             <MyCheckbox
+                className={cl.checkbox}
                 checked={post.check}
                 onChange={(elem) => upDateCkeck(post.title, elem.target.checked)}
                 type={'checkbox'}
             />
-            <h2>{title}</h2>
-            <ButtonDelete onClick = {() => removeItem(post)}/>
+            <h2 className={cl.text}>{title}</h2>
+            <ButtonDelete onClick = {() => removeItem(post)} className={cl.deleteBtn}/>
         </div>
     )
 }

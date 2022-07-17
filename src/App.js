@@ -7,10 +7,10 @@ import './style/App.css';
 function App() {
 
   const [state, setState] = useState([
-    {title:'Убраться дома', check:false},
-    {title:'Сделать уроки', check:false},
-    {title:'Покушать морковки', check:false},
-    {title:'Сделать сайт', check:false},
+    {title:'Wash my carsdhfhjsfdhsdhfhsjhfdhjsdgfsjhdfshdfhsdfhsffdhsdjfhsjdfh', check:false},
+    {title:'Wash my dog', check:false},
+    {title:'Wash my house', check:false},
+    {title:'Wash my apples', check:false},
   ])
 
 
@@ -39,6 +39,7 @@ function App() {
 
   return (
     <div className="App">
+        <p className='description'>TO DO</p>
         <MyForm
           value={post}
           setValue={setPost}
@@ -54,7 +55,6 @@ function App() {
           checkValue={state}
           setCheckValue={setState}
           remove={deleteItem}
-          title={'Список задач'}
           value={sortedPost}
         />
     </div>

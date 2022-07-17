@@ -9,7 +9,8 @@ const MyForm = ({addPost, value, setValue}) => {
     return (
         <form className={cl.myForm}>
             <MyInput
-                placeholder={'Введите задачу'}
+                maxlength={'30'}
+                placeholder={'Create a new todo...'}
                 value={value.title}
                 onChange={(elem) => setValue({title:elem.target.value, check:false})}
                 type={'text'} 

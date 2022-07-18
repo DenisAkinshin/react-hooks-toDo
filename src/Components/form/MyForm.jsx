@@ -12,7 +12,7 @@ const MyForm = ({addPost, value, setValue}) => {
                 maxlength={'30'}
                 placeholder={'Create a new todo...'}
                 value={value.title}
-                onChange={(elem) => setValue({title:elem.target.value, check:false})}
+                onChange={(elem) => setValue({id:Date.now(),title:elem.target.value, check:false})}
                 type={'text'} 
             />
             <ButtonAdd

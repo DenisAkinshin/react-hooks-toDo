@@ -3,13 +3,13 @@ import ButtonDelete from "../UI/buttons/ButtonDelete";
 import cl from './items.module.css'
 import MyCheckbox from "../UI/input/MyCheckbox";
 
-const MyItem = ({title, post, removeItem, checkValue, setCheckValue}) => {
+const MyItem = ({title, id, post, removeItem, checkValue, setCheckValue}) => {
 
     
 
-    function upDateCkeck(title, value) {
+    function upDateCkeck(id, value) {
         let updateList = checkValue.map((item) => {
-            if (item.title == title) {
+            if (item.id == id) {
                 return {...item, check:value}
             } else {
                 return item
@@ -23,7 +23,7 @@ const MyItem = ({title, post, removeItem, checkValue, setCheckValue}) => {
             <MyCheckbox
                 className={cl.checkbox}
                 checked={post.check}
-                onChange={(elem) => upDateCkeck(post.title, elem.target.checked)}
+                onChange={(elem) => upDateCkeck(id, elem.target.checked)}
                 type={'checkbox'}
             />
             <h2 className={cl.text}>{title}</h2>

@@ -12,6 +12,7 @@ const MyItemList = ({title, value, remove, checkValue, setCheckValue}) => {
             <div className={cl.list}>
                 {value.map((element, index) => 
                     <MyItem 
+                        id={element.id}
                         key={index} 
                         title={element.title} 
                         post={element} 

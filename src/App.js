@@ -7,17 +7,16 @@ import './style/App.css';
 function App() {
 
   const [state, setState] = useState([
-    {title:'Wash my carsdhfhjsfdhsdhfhsjhfdhjsdgfsjhdfshdfhsdfhsffdhsdjfhsjdfh', check:false},
-    {title:'Wash my dog', check:false},
-    {title:'Wash my house', check:false},
-    {title:'Wash my apples', check:false},
+    {id:1,title:'Wash my cars', check:false},
+    {id:2,title:'Wash my dog', check:false},
+    {id:3,title:'Wash my house', check:false},
+    {id:4,title:'Wash my apples', check:false},
   ])
 
 
-  const [post, setPost] = useState({title:'', check:false})
+  const [post, setPost] = useState({id:0, title:'', check:false})
   const [sort, setSort]= useState('false')
 
-  console.log(state)
 
   const sortedPost = useMemo(() => {
     if (sort === 'false') {
@@ -30,11 +29,11 @@ function App() {
 
   function addItem(item) {
     setPost({title:'', check:'false'})
-    setState([...state, item]);
+    setState([item,...state]);
   }
 
   function deleteItem(item) {
-    setState(state.filter((elem) => elem.title !== item.title))
+    setState(state.filter((elem) => elem.id !== item.id))
   }
 
   return (
